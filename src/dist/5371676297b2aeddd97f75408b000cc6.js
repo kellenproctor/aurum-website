@@ -132,7 +132,39 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":26}],23:[function(require,module,exports) {
+},{"./bundle-url":26}],33:[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      module.exports = {
+  "container": "_container_l1rne_165",
+  "active": "_active_l1rne_177",
+  "navbar": "_navbar_l1rne_187",
+  "logo": "_logo_l1rne_221",
+  "top-nav": "_top-nav_l1rne_243",
+  "icon": "_icon_l1rne_261",
+  "hero": "_hero_l1rne_271",
+  "cta": "_cta_l1rne_307",
+  "available": "_available_l1rne_327",
+  "cta-bottom-mobile": "_cta-bottom-mobile_l1rne_1",
+  "services": "_services_l1rne_421",
+  "item": "_item_l1rne_445",
+  "SEO": "_SEO_l1rne_465",
+  "SEM": "_SEM_l1rne_475",
+  "Display": "_Display_l1rne_485",
+  "Design": "_Design_l1rne_495",
+  "philosophy": "_philosophy_l1rne_537",
+  "philosophy-content": "_philosophy-content_l1rne_553",
+  "footer": "_footer_l1rne_617",
+  "navvar": "_navvar_l1rne_835",
+  "close": "_close_l1rne_867",
+  "open": "_open_l1rne_883",
+  "cta-bottom": "_cta-bottom_l1rne_1",
+  "footer1": "_footer1_l1rne_1089",
+  "footer2": "_footer2_l1rne_1097"
+};
+},{"./..\\Drim.ttf":22,"./..\\images\\hero_flipped.jpg":25,"_css_loader":17}],23:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -164,34 +196,8 @@ module.exports = reloadCSS;
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
-      module.exports = {
-  "container": "_container_1blei_165",
-  "active": "_active_1blei_177",
-  "navbar": "_navbar_1blei_187",
-  "logo": "_logo_1blei_221",
-  "top-nav": "_top-nav_1blei_243",
-  "icon": "_icon_1blei_261",
-  "hero": "_hero_1blei_271",
-  "cta": "_cta_1blei_307",
-  "available": "_available_1blei_327",
-  "cta-bottom-mobile": "_cta-bottom-mobile_1blei_1",
-  "services": "_services_1blei_421",
-  "item": "_item_1blei_445",
-  "SEO": "_SEO_1blei_465",
-  "SEM": "_SEM_1blei_475",
-  "Display": "_Display_1blei_485",
-  "Design": "_Design_1blei_495",
-  "philosophy": "_philosophy_1blei_537",
-  "philosophy-content": "_philosophy-content_1blei_553",
-  "footer": "_footer_1blei_617",
-  "navvar": "_navvar_1blei_835",
-  "close": "_close_1blei_867",
-  "open": "_open_1blei_883",
-  "cta-bottom": "_cta-bottom_1blei_1",
-  "footer1": "_footer1_1blei_1089",
-  "footer2": "_footer2_1blei_1097"
-};
-},{"./about.css":23,"./contact.css":24,"./..\\Drim.ttf":22,"./..\\images\\hero_flipped.jpg":25,"_css_loader":17}],28:[function(require,module,exports) {
+      module.exports = {};
+},{"./main.css":33,"./about.css":23,"./contact.css":24,"_css_loader":17}],28:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -394,6 +400,6 @@ LazyPromise.prototype.catch = function (onError) {
   return this.promise || (this.promise = new Promise(this.executor).catch(onError));
 };
 },{"./bundle-url":26}],0:[function(require,module,exports) {
-var b=require(30);b.load([["fe5713d9c212e13cdd41719d2082de08.jpg",27],["8b0b5674c826b642dc2e210e90e5a2ce.ttf",22],["985db691bedce63e211b75d53d56dd52.jpg",25]]);
+var b=require(30);b.load([["8b0b5674c826b642dc2e210e90e5a2ce.ttf",22],["985db691bedce63e211b75d53d56dd52.jpg",25],["fe5713d9c212e13cdd41719d2082de08.jpg",27]]);
 },{}]},{},[28,0])
 //# sourceMappingURL=/dist/5371676297b2aeddd97f75408b000cc6.map
