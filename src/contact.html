@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurum Marketing | Contact Us</title>
+    <!-- Favicon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon stuff -->
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/assets_svg/Logo@2x.svg" alt="Logo">
+            </div>
+            <button aria-expanded="false" aria-controls="top-nav" class="menu-button">
+                <span class="open">&#9776;</span>
+                <span class="close">X</span>
+            </button>
+            <div class="top-nav">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html" class='active'>Contact</a>
+            </div>
+        </nav>
+
+        <section class="contact">
+            <form action="" method="" enctype="" class="form">
+                <div>
+                    <label for="name"><span class="star">*</span>Name:</label>
+                    <input type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Rashida Jones"
+                            required>
+                </div>
+                <div>
+                    <label for="email"><span class="star">*</span>Email:</label>
+                    <input type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="you@youremail.com"
+                            required>
+                </div>
+                <div>
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="(315) 123-0987">
+                </div>
+                <div>
+                    <label for="website">Website:</label>
+                    <input type="text" 
+                            id="website" 
+                            name="website" 
+                            placeholder="www.yourwebsite.com">
+                </div>
+                <div>
+                    <label for="services">What services are you looking for?</label>
+                    <textarea name="" 
+                                id="services" 
+                                name="services" 
+                                cols="30" 
+                                rows="10"></textarea>
+                    <label for="services">Max <span id="chars">500</span> characters</label>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+            
+            <div class="contact-card">
+                <h1>Get your free consultation</h1>
+                <p>
+                    Submit your current website and we’ll do a
+                    no-cost evaluation to determine growth
+                    opportunities and give you a customized roadmap to
+                    get there. Consultation includes:
+                </p>
+                <div class="available">
+                    <img src="./assets/assets_svg/Checkbox@2x.svg" alt="checkbox">
+                    SEO Audit
+                </div>
+                <div class="available">
+                    <img src="./assets/assets_svg/Checkbox@2x.svg" alt="checkbox">
+                    Critique of brand identity
+                </div>
+                <div class="available">
+                    <img src="./assets/assets_svg/Checkbox@2x.svg" alt="checkbox">
+                    COMPETITIVE MARKET ANALYSIS
+                </div>
+                <div class="available">
+                    <img src="./assets/assets_svg/Checkbox@2x.svg" alt="checkbox">
+                    ACTION PLAN TO GROW YOUR BUSINESS
+                </div>
+                <p>
+                    If you haven’t launched online yet, even better.
+                    We’ll create a multi-platform strategy to get you
+                    up and running quickly.
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer1">email@emailaddy.com</div>
+            <img class="logo" src="./assets/assets_svg/aurum_logo.png" alt="Logo">
+            <div class="footer2">&copy; Aurum Marketing 2017</div>
+        </footer>
+    </div>
+
+    <script src="./assets/scripts/index.js"></script>
+</body>
+
+</html>

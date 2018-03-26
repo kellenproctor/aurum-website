@@ -1,0 +1,784 @@
+/* BASE STYLES */
+@font-face {
+    font-family: 'Drim';
+    src: url('../Drim.ttf') format('truetype');
+}
+
+:root {
+    --background: #302A3A;
+    --button: #E5901A;
+    --font-color: #616264;
+    --footer-color: #666666;
+    --hover-color: #302A3A;
+    --white: #FFF;
+    --blue: #0078A4;
+    --black: #000000;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: Drim, "Myriad Pro", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+body {
+    min-height: calc(100vh - 100px);
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Drim;
+    font-weight: 300;
+    color: var(--font-color);
+    margin: 0;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 5px;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+button {
+    background: var(--button);
+    border: none;
+    padding: 5px 15px;
+    color: var(--white);
+    font-family: Drim;
+    font-weight: 300;
+    font-size: 31px;
+    letter-spacing: -1.3px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+button:hover {
+    color: var(--font-color);
+}
+
+/* ////////////////////////////////////////////////////////////////////////
+    DESKTOP
+//////////////////////////////////////////////////////////////////////// */
+
+/* PAGE SPECIFIC CSS */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar" "hero" "services" "philosophy" "footer";
+}
+
+.active {
+    border-bottom: 2px solid;
+}
+
+/* NAVBAR */
+.navbar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    margin: 50px 0 0 0;
+    font-family: Drim;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.navbar button {
+    display: none;
+}
+
+.logo {
+    grid-column: 1 / 2;
+    margin: 0 0 20px 5vw;
+    height: 10vh;
+    width: 20vw;
+}
+
+.logo img {
+    height: inherit;
+}
+
+.top-nav {
+    grid-column: 3 / -1;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    margin: 0 0 15px 0;
+    overflow: hidden;
+}
+
+.icon {
+    display: none;
+}
+
+/* HERO */
+.hero {
+    background-image: url("../images/hero_flipped.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background);
+    grid-area: hero;
+    display: grid;
+    grid-gap: 20px;
+    height: 826px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    border-bottom: 5px solid var(--background);
+}
+
+.cta {
+    grid-column: 2 / -1;
+    padding: 20px;
+    border: 1px solid white;
+    text-align: right;
+    width: 500px;
+    margin-right: 50px;
+    background: var(--white);
+}
+
+.available {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    font-family: Roboto;
+    font-size: 16px;
+    color: var(--blue);
+}
+
+.available img {
+    width: 18px;
+    margin-right: 5px;
+}
+
+.cta h2 {
+    font-size: 65px;
+    letter-spacing: -2.73px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.cta p {
+    font-size: 29px;
+    line-height: 36px;
+    letter-spacing: -1.07px;
+}
+
+.cta button {
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.cta button:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+#cta-bottom-mobile {
+    display: none;
+}
+
+/* SERVICES */
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 50px 25px;
+}
+
+.item {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.item > img {
+    margin-bottom: 30px;
+}
+
+.SEO img {
+    width: 158px;
+    height: 93px;
+}
+
+.SEM img {
+    width: 120px;
+    height: 98px;
+}
+
+.Display img {
+    width: 97px;
+    height: 99px;
+}
+
+.Design img {
+    width: 125px;
+    height: 102px;
+}
+
+.item h2 {
+    font-size: 60px;
+    line-height: 59px;
+    letter-spacing: -2.52px;
+    font-weight: 300;
+}
+
+.item p {
+    font-family: Myriad Pro;
+    font-size: 31px;
+    letter-spacing: -1.3px;
+    color: var(--black);
+    margin: 15px 0;
+}
+
+/* PHILOSOPHY */
+.philosophy {
+    padding: 100px 0;
+    background: var(--background);
+    grid-area: philosophy;
+    display: grid;
+    justify-items: center;
+}
+
+.philosophy-content {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    width: 75%;
+}
+
+.philosophy-content h1 {
+    font-family: Drim;
+    font-size: 65px;
+    line-height: 38px;
+    letter-spacing: -3.07px;
+    color: var(--white);
+    position: relative;
+}
+
+.philosophy-content h1::before {
+    content: '°';
+    font-size: 30px;
+    vertical-align: top;
+    position: absolute;
+    top: -20px;
+}
+
+.philosophy-content p {
+    font-family: Myriad Pro;
+    font-size: 38px;
+    letter-spacing: -1.6px;
+    color: var(--white);
+}
+
+/* FOOTER */
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    padding: 30px 20px;
+    color: var(--footer-color);
+    font-family: Myriad Pro;
+    font-size: 20px;
+    letter-spacing: -0.84px;
+}
+
+.footer .logo {
+    grid-column: 2 / 3;
+    width: 173px;
+    margin: 0;
+}
+
+/* ////////////////////////////////////////////////////////////////////////
+    TABLET
+//////////////////////////////////////////////////////////////////////// */
+@media (max-width: 822px) {
+    /* NAVBAR */
+    .navbar {
+        font-size: 21px;
+        margin-top: 25px;
+    }
+
+    /* HERO - CALL TO ACTION */
+    .cta {
+        width: 50vw;
+    }
+
+    .cta h2 {
+        font-size: 40px;
+    }
+
+    .cta p {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 26px;
+    }
+    
+    /* 2 columns for services on tablets */
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////
+    MOBILE
+//////////////////////////////////////////////////////////////////////// */
+@media (max-width: 425px) {
+    /* PAGE SPECIFIC CSS */
+    .container {
+        display: grid;
+        grid-gap: 0;
+        grid-template-areas: "navbar"
+                            "hero"
+                            "cta"
+                            "services"
+                            "philosophy"
+                            "footer";
+        margin-top: 15vh;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        grid-area: navbar;
+        grid-template-columns: 220px 1fr;
+        grid-template-areas: "logo button" "links links";
+        margin: 0;
+        position: fixed;
+        width: 100vw;
+        background: white;
+        top: 0;
+    }
+
+    .navbar.logo {
+        grid-area: logo;
+    }
+
+    .navbar button {
+        display: grid;
+        grid-area: button;
+        align-self: center;
+        background: white;
+        color: var(--font-color);
+        height: 100%;
+    }
+
+    .top-nav {
+        grid-area: links;
+        display: none;
+        grid-auto-flow: row;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    [aria-controls="menu-list"] {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .navvar .top-nav {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transform: rotateX(90deg);
+                transform: rotateX(90deg);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
+    [aria-expanded="true"] ~ .top-nav {
+        display: grid;
+        max-height: 500px;
+        -webkit-transform: rotateX(0);
+                transform: rotateX(0);
+    }
+    
+    [aria-expanded="false"] .close {
+        display: none;
+    }
+    
+    [aria-expanded="true"] .close {
+        display: inline-block;
+    }
+    
+    [aria-expanded="true"] .open {
+        display: none;
+    }
+
+    /* HERO */
+    .hero {
+        height: 87vh;
+        -ms-flex-line-pack: start;
+            align-content: start;
+        background-position-x: -60vw;
+    }
+
+    /* HERO - CALL TO ACTION */
+    .cta {
+        width: 55vw;
+        margin: 50px 20px 0 0;
+        padding: 10px;
+    }
+
+    .available {
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .available img {
+        width: 10px;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+        letter-spacing: -1.09px;
+    }
+
+    .cta p {
+        font-size: 24px;
+    }
+
+
+    /* MOBILE CALL TO ACTION */
+    #cta-bottom {
+        display: none;
+    }
+
+    #cta-bottom-mobile {
+        display: grid;
+        justify-items: center;
+        grid-area: cta;
+        background: var(--background);
+        padding: 20px 20px 50px 20px;
+    }
+
+    #cta-bottom-mobile p {
+        font-size: 25px;
+        line-height: 30px;
+        letter-spacing: -0.92px;
+        color: var(--white);
+        text-align: center;
+    }
+
+    /* SERVICES */
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    /* PHILOSOPHY */
+    .philosophy {
+        padding: 50px 20px 50px 20px;
+    }
+
+    .philosophy-content {
+        width: 100%;
+    }
+
+    .philosophy h1 {
+        padding: 0;
+        font-size: 56px;
+        line-height: 66px;
+        letter-spacing: -2.35px;
+    }
+
+    .philosophy p {
+        font-size: 28px;
+        letter-spacing: -1.18px;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "logo footer"
+            "logo footer1"
+            "logo footer2";
+        font-size: 15px;
+        justify-items: end;
+        padding: 25px 25px 25px 0;
+    }
+
+    .footer .logo{
+        grid-area: logo;
+        width: 140px;
+    }
+
+    .footer1 {
+        grid-area: footer1;
+    }
+
+    .footer2 {
+        grid-area: footer2;
+        padding-bottom: 3px;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////
+    ABOUT
+//////////////////////////////////////////////////////////////////////// */
+.about-hero {
+    background-image: url("../images/Asset 33@2x-50.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background);
+    grid-area: hero;
+    display: grid;
+    height: 826px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 5px solid var(--background);
+}
+
+.about-card {
+    width: 80vw;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    display: grid;
+    justify-content: space-around;
+}
+
+.about-card h1, .about-card p {
+    width: 60vw;
+}
+
+.about-card h1 {
+    font-size: 3rem;
+    padding: 40px 0 20px 0;
+}
+
+.about-card p {
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+.team {
+    grid-area: philosophy;
+    background: var(--background);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    justify-items: center;
+    padding: 200px 0 50px 0;
+    z-index: -1;
+}
+
+.profile {
+    width: 35vw;
+    background: white;
+    padding: 100px 50px 50px 50px;
+    text-align: center;
+    position: relative;
+}
+
+.profile-pic {
+    height: 220px;
+    width: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.profile-pic > img {
+    width: 100%;
+    height: auto;
+
+}
+
+.name  {
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+.role {
+    text-transform: uppercase;
+    color: var(--blue);
+    font-size: .8rem;
+}
+
+.profile p {
+    text-align: left;
+    font-weight: 600;
+}
+
+@media (max-width: 822px) {
+    .team {
+        grid-template-columns: 1fr;
+        grid-gap: 200px;
+    }
+
+    .profile {
+        width: 80vw;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////
+    FORM
+//////////////////////////////////////////////////////////////////////// */
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "form card";
+    background: var(--background);
+    padding-bottom: 25px;
+}
+
+.form {
+    grid-area: form;
+    display: grid;
+    width: 35vw;
+    margin: 50px auto;
+    grid-gap: 20px;
+}
+
+.star {
+    color: var(--button);
+}
+
+.form div {
+    display: grid;
+    grid-gap: 5px;
+}
+
+label {
+    color: white;
+}
+
+input {
+    padding: 5px;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.contact-card {
+    grid-area: card;
+    display: grid;
+    justify-items: start;
+    padding: 30px;
+    margin: 50px auto auto auto;
+    width: 35vw;
+    background: white;
+}
+
+.contact-card h1 {
+    font-size: 2.8rem;
+    color: var(--blue);
+    padding-bottom: 25px;
+}
+
+.contact-card .available {
+    color: var(--font-color);
+    font-size: 1rem;
+    align-items: center;
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contact-card p {
+    font-size: 1.5rem;
+    margin: 20px 0 20px 0;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        background: none;
+        margin-top: 25px;
+        justify-items: end;
+        text-align: right;
+        padding: 30px 0 0 0;
+    }
+
+    .contact-card h1 {
+        color: white;
+    }
+
+    .contact-card .available {
+        color: white;
+        font-size: .8rem;
+        font-weight: 600;
+    }
+
+    .contact-card p {
+        color: white;
+        line-height: 1.8rem;
+    }
+
+    .arrow {
+        width: 33vw;
+        right: -33vw;
+        transform: rotate(-18deg);
+    }
+
+}
+
+@media (max-width: 425px) {
+    .contact {
+        grid-template-columns: 1fr;
+        grid-template-areas: "card" "form";
+    }
+
+    .contact-card {
+        width: 80vw;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .form {
+        width: 80vw;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
