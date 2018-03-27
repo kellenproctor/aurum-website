@@ -9,7 +9,8 @@
     background-color: var(--background);
     grid-area: hero;
     display: grid;
-    height: 826px;
+    height: 85vh;
+    margin-top: 15vh;
     align-content: center;
     justify-content: center;
     border-bottom: 5px solid var(--background);

@@ -8,6 +8,8 @@
     grid-template-areas: "form card";
     background: var(--background);
     padding-bottom: 25px;
+    height: 85vh;
+    margin-top: 15vh;
 }
 
 .form {
