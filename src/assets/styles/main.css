@@ -43,19 +43,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--font-color);
-}
-
-a {
-    text-decoration: none;
-    color: var(--font-color);
-    padding: 5px;
-}
-
-a:hover {
-    color: var(--hover-color);
+    font-size: 1.2rem;
 }
 
 button {
@@ -65,9 +64,8 @@ button {
     color: var(--white);
     font-family: Drim;
     font-weight: 300;
-    font-size: 31px;
-    letter-spacing: -1.3px;
-    -webkit-transition: .2s;
+    font-size: 1.8rem;
+    letter-spacing: -0.05rem;
     transition: .2s;
 }
 
@@ -78,30 +76,17 @@ button:hover {
 /* ////////////////////////////////////////////////////////////////////////
     DESKTOP
 //////////////////////////////////////////////////////////////////////// */
-
-/* PAGE SPECIFIC CSS */
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "navbar" "hero" "services" "philosophy" "footer";
-}
-
-.active {
-    border-bottom: 2px solid;
-}
-
 /* NAVBAR */
 .navbar {
-    grid-area: navbar;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-    margin: 50px 0 0 0;
+    align-items: end;
+    padding: 2vh 0 0 0;
     font-family: Drim;
-    font-size: 28px;
-    font-weight: 300;
+    position: fixed;
+    top: 0;
+    background: var(--white);
+    height: 15vh;
 }
 
 .navbar button {
@@ -110,7 +95,7 @@ button:hover {
 
 .logo {
     grid-column: 1 / 2;
-    margin: 0 0 20px 5vw;
+    margin: 0 0 2.5vh 5vw;
     height: 10vh;
     width: 20vw;
 }
@@ -125,39 +110,54 @@ button:hover {
     grid-auto-flow: column;
     justify-items: center;
     margin: 0 0 15px 0;
-    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 5px 15px;
+}
+
+.top-nav a:hover {
+    color: var(--hover-color);
+}
+
+.active {
+    border-bottom: 2px solid;
 }
 
 .icon {
     display: none;
 }
 
+/* PAGE SPECIFIC CSS */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hero" "services" "philosophy" "footer";
+}
+
 /* HERO */
 .hero {
+    grid-area: hero;
     background-image: url("../images/hero_flipped.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--background);
-    grid-area: hero;
+
     display: grid;
-    grid-gap: 20px;
-    height: 826px;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
-    border-bottom: 5px solid var(--background);
+    margin-top: 15vh;
+    height: 85vh;
+    align-content: center;
+    justify-content: right;
 }
 
 .cta {
-    grid-column: 2 / -1;
-    padding: 20px;
-    border: 1px solid white;
-    text-align: right;
-    width: 500px;
-    margin-right: 50px;
+    padding: 45px;
+    width: 45vw;
+    margin-right: 5vw;
     background: var(--white);
 }
 
@@ -165,42 +165,46 @@ button:hover {
     display: grid;
     grid-auto-flow: column;
     justify-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    -ms-flex-line-pack: end;
-        align-content: flex-end;
+    justify-content: start;
     font-family: Roboto;
-    font-size: 16px;
     color: var(--blue);
+    padding-bottom: 1.5vh;
+    letter-spacing: -.01rem;
 }
 
 .available img {
     width: 18px;
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .cta h2 {
-    font-size: 65px;
-    letter-spacing: -2.73px;
-    font-weight: 300;
-    margin: 0;
+    letter-spacing: -.1rem;
+    line-height: 3.5rem;
 }
 
 .cta p {
-    font-size: 29px;
-    line-height: 36px;
-    letter-spacing: -1.07px;
+    line-height: 1.5rem;
+    letter-spacing: -.05rem;
+    margin: 20px 0 25px 0;
+}
+
+#cta-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+#cta-bottom div {
+    align-self: center;
 }
 
 .cta button {
-    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 .cta button:active {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    transform: translate(3px, 3px);
+    box-shadow: none;
+    transition: none;
 }
 
 #cta-bottom-mobile {
@@ -212,97 +216,124 @@ button:hover {
     grid-area: services;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 25px;
+    grid-gap: 3vw;
     justify-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 50px 25px;
+    align-items: flex-start;
+    margin: 50px;
+}
+
+.services h1 {
+    grid-column: 1 / -1;
 }
 
 .item {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
 }
 
-.item > img {
-    margin-bottom: 30px;
+.sprite {
+    height: 10vw;
+    width: 10vw;
+    margin: 0 0 4vw 0;
 }
 
-.SEO img {
-    width: 158px;
-    height: 93px;
+.SEO {
+    background-image: url("../assets_svg/SEO@2x.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.SEM img {
-    width: 120px;
-    height: 98px;
+.SEM {
+    background-image: url("../assets_svg/SEM@2x.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.Display img {
-    width: 97px;
-    height: 99px;
+.Display {
+    background-image: url("../assets_svg/Display@2x.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.Design img {
-    width: 125px;
-    height: 102px;
+.Design {
+    background-image: url("../assets_svg/Design@2x.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .item h2 {
-    font-size: 60px;
-    line-height: 59px;
-    letter-spacing: -2.52px;
     font-weight: 300;
 }
 
 .item p {
     font-family: Myriad Pro;
-    font-size: 31px;
-    letter-spacing: -1.3px;
     color: var(--black);
     margin: 15px 0;
 }
 
 /* PHILOSOPHY */
 .philosophy {
-    padding: 100px 0;
+    padding: 8vh 9vw;
     background: var(--background);
     grid-area: philosophy;
     display: grid;
-    justify-items: center;
 }
 
 .philosophy-content {
     display: grid;
-    justify-items: center;
-    text-align: center;
-    width: 75%;
+    width: 80vw;
 }
 
 .philosophy-content h1 {
     font-family: Drim;
-    font-size: 65px;
-    line-height: 38px;
-    letter-spacing: -3.07px;
     color: var(--white);
     position: relative;
+    letter-spacing: -.1rem;
 }
 
 .philosophy-content h1::before {
     content: '°';
-    font-size: 30px;
     vertical-align: top;
     position: absolute;
-    top: -20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.quote {
+    color: var(--white);
+    font-size: 4rem;
+    letter-spacing: -.1rem;
 }
 
 .philosophy-content p {
-    font-family: Myriad Pro;
-    font-size: 38px;
-    letter-spacing: -1.6px;
     color: var(--white);
+    letter-spacing: -.05rem;
+    line-height: 1.5rem;
+}
+
+.philosophy-content .available {
+    color: var(--white);
+    font-size: 1.1rem;
+    letter-spacing: -.05rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    padding: 0 0 5px 1vw;
+}
+
+.philosophy-content .button {
+    margin: 5vh auto 2vh auto;
+}
+
+.teamwork {
+    width: 50vw;
+    margin: 10vh auto 5vh auto;
 }
 
 /* FOOTER */
@@ -311,20 +342,20 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+    align-items: end;
     padding: 30px 20px;
     color: var(--footer-color);
-    font-family: Myriad Pro;
-    font-size: 20px;
-    letter-spacing: -0.84px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer .logo {
     grid-column: 2 / 3;
-    width: 173px;
     margin: 0;
+    max-height: 10vh;
+    max-width: 25vw;
+    width: auto;
+    height: auto;
+    
 }
 
 /* ////////////////////////////////////////////////////////////////////////
@@ -332,26 +363,25 @@ button:hover {
 //////////////////////////////////////////////////////////////////////// */
 @media (max-width: 822px) {
     /* NAVBAR */
-    .navbar {
-        font-size: 21px;
-        margin-top: 25px;
+    .topnav {
+        grid-column: 2 / -1;
     }
 
     /* HERO - CALL TO ACTION */
     .cta {
-        width: 50vw;
+
     }
 
     .cta h2 {
-        font-size: 40px;
+
     }
 
     .cta p {
-        font-size: 24px;
+
     }
 
     button {
-        font-size: 26px;
+
     }
     
     /* 2 columns for services on tablets */
@@ -367,26 +397,22 @@ button:hover {
     /* PAGE SPECIFIC CSS */
     .container {
         display: grid;
-        grid-gap: 0;
-        grid-template-areas: "navbar"
-                            "hero"
+        grid-template-areas: "hero"
                             "cta"
                             "services"
                             "philosophy"
                             "footer";
-        margin-top: 15vh;
     }
 
     /* NAVBAR */
     .navbar {
-        grid-area: navbar;
-        grid-template-columns: 220px 1fr;
+        grid-template-columns: 60vw 40vw;
         grid-template-areas: "logo button" "links links";
         margin: 0;
         position: fixed;
-        width: 100vw;
         background: white;
         top: 0;
+        z-index: 100;
     }
 
     .navbar.logo {
@@ -406,8 +432,11 @@ button:hover {
         grid-area: links;
         display: none;
         grid-auto-flow: row;
-        -webkit-transition: all 0.5s;
         transition: all 0.5s;
+        position: fixed;
+        top: 15vh;
+        background: var(--white);
+        width: 100vw;
     }
 
     [aria-controls="menu-list"] {
@@ -415,20 +444,8 @@ button:hover {
         margin-bottom: 10px;
     }
     
-    .navvar .top-nav {
-        max-height: 0;
-        overflow: hidden;
-        -webkit-transform: rotateX(90deg);
-                transform: rotateX(90deg);
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s;
-    }
-    
     [aria-expanded="true"] ~ .top-nav {
         display: grid;
-        max-height: 500px;
-        -webkit-transform: rotateX(0);
-                transform: rotateX(0);
     }
     
     [aria-expanded="false"] .close {
@@ -446,8 +463,7 @@ button:hover {
     /* HERO */
     .hero {
         height: 87vh;
-        -ms-flex-line-pack: start;
-            align-content: start;
+        align-content: start;
         background-position-x: -60vw;
     }
 
@@ -460,20 +476,18 @@ button:hover {
 
     .available {
         font-weight: bold;
-        font-size: 10px;
     }
 
     .available img {
-        width: 10px;
+
     }
 
     .cta h2 {
-        font-size: 26px;
-        letter-spacing: -1.09px;
+
     }
 
     .cta p {
-        font-size: 24px;
+
     }
 
 
@@ -483,17 +497,14 @@ button:hover {
     }
 
     #cta-bottom-mobile {
+        grid-area: cta;
         display: grid;
         justify-items: center;
-        grid-area: cta;
         background: var(--background);
         padding: 20px 20px 50px 20px;
     }
 
     #cta-bottom-mobile p {
-        font-size: 25px;
-        line-height: 30px;
-        letter-spacing: -0.92px;
         color: var(--white);
         text-align: center;
     }
@@ -514,32 +525,29 @@ button:hover {
 
     .philosophy h1 {
         padding: 0;
-        font-size: 56px;
-        line-height: 66px;
-        letter-spacing: -2.35px;
     }
 
     .philosophy p {
-        font-size: 28px;
-        letter-spacing: -1.18px;
     }
 
     /* FOOTER */
     .footer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 30vw 1fr;
         grid-template-areas: 
             "logo footer"
             "logo footer1"
             "logo footer2";
-        font-size: 15px;
         justify-items: end;
-        padding: 25px 25px 25px 0;
+        padding: 10px;
     }
 
     .footer .logo{
         grid-area: logo;
-        width: 140px;
+        padding: 0;
+        width: 30vw;
+        height: auto;
+        justify-self: center;
     }
 
     .footer1 {
@@ -548,6 +556,5 @@ button:hover {
 
     .footer2 {
         grid-area: footer2;
-        padding-bottom: 3px;
     }
 }

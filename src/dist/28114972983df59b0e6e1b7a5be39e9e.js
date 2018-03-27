@@ -71,18 +71,24 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({16:[function(require,module,exports) {
+})({13:[function(require,module,exports) {
 var navButton = document.querySelector('button[aria-expanded]');
 
 function toggleNav(_ref) {
     var target = _ref.target;
+
+    if (navButton.innerHTML == 'X') {
+        navButton.innerHTML = '&#9776;';
+    } else {
+        navButton.innerHTML = 'X';
+    }
 
     var expanded = target.getAttribute('aria-expanded') === 'true' || false;
     navButton.setAttribute('aria-expanded', !expanded);
 }
 
 navButton.addEventListener('click', toggleNav);
-},{}],28:[function(require,module,exports) {
+},{}],29:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -104,7 +110,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60243' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50642' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -205,5 +211,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[28,16])
+},{}]},{},[29,13])
 //# sourceMappingURL=/dist/28114972983df59b0e6e1b7a5be39e9e.map

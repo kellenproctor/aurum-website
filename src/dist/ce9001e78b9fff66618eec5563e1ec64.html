@@ -20,22 +20,22 @@
 <script src="/dist/5371676297b2aeddd97f75408b000cc6.js"></script></head>
 
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="/dist/44aea640b35d65a6d546e7e265eca9ff.svg" alt="Logo">
-            </div>
-            <button aria-expanded="false" aria-controls="top-nav" class="menu-button">
-                <span class="open">&#9776;</span>
-                <span class="close">X</span>
-            </button>
-            <div class="top-nav">
-                <a href="/dist/index.html">Home</a>
-                <a href="/dist/eb5c2ca97c4cb4fbf9f4056ba4a346cc.html">About</a>
-                <a href="/dist/ce9001e78b9fff66618eec5563e1ec64.html" class="active">Contact</a>
-            </div>
-        </nav>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/dist/0e379c2b67c0ab85522e9b8d1dc66e90.png" alt="Logo">
+        </div>
+        <button aria-expanded="false" aria-controls="top-nav" class="menu-button">
+            <span class="open">&#9776;</span>
+            <span class="close">X</span>
+        </button>
+        <div class="top-nav">
+            <a href="/dist/index.html">Home</a>
+            <a href="/dist/eb5c2ca97c4cb4fbf9f4056ba4a346cc.html">About</a>
+            <a href="/dist/ce9001e78b9fff66618eec5563e1ec64.html" class="active">Contact</a>
+        </div>
+    </nav>
 
+    <div class="container">
         <section class="contact">
             <form action="" method="" enctype="" class="form">
                 <div>
@@ -56,8 +56,8 @@
                 </div>
                 <div>
                     <label for="services">What services are you looking for?</label>
-                    <textarea name="" id="services" cols="30" rows="10"></textarea>
-                    <label for="services">Max <span id="chars">500</span> characters</label>
+                    <textarea name="" id="services" cols="30" rows="12" maxlength="500"></textarea>
+                    <label class="chars" for="services">Max <span id="chars">500</span> characters</label>
                 </div>
                 <button type="submit">Send</button>
             </form>

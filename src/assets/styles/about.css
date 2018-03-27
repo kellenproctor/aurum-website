@@ -18,24 +18,24 @@
 .about-card {
     width: 80vw;
     background: white;
-    padding: 25px;
+    padding: 25px 25px 40px 25px;
     text-align: center;
     display: grid;
-    justify-content: space-around;
-}
-
-.about-card h1, .about-card p {
-    width: 60vw;
+    justify-items: center;
 }
 
 .about-card h1 {
+    width: 60vw;
     font-size: 3rem;
     padding: 40px 0 20px 0;
 }
 
 .about-card p {
-    line-height: 1.5rem;
-    font-weight: 600;
+    width: 50vw;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin: 16px 0 20px 0;
 }
 
 .team {
@@ -83,6 +83,7 @@
     text-transform: uppercase;
     color: var(--blue);
     font-size: .8rem;
+    letter-spacing: .05rem;
 }
 
 .profile p {

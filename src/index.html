@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- End Favicon stuff -->
@@ -26,11 +26,8 @@
         <div class="logo">
             <img src="./assets/assets_svg/aurum_logo.png" alt="Logo">
         </div>
-        <button aria-expanded="false" aria-controls="top-nav" class="menu-button">
-            <span class="open">&#9776;</span>
-            <span class="close">X</span>
-        </button>
-        <div class="top-nav">
+        <button aria-expanded="false" aria-controls="top-nav" class="menu-button">&#9776;</button>
+        <div id="top-nav" class="top-nav">
             <a href="./index.html" class='active'>Home</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact</a>
@@ -56,7 +53,7 @@
                         partner in navigating the digital world. Get started with a
                         free consultation to see how your business can grow.
                     </p>
-                    <a href="./contact.html"><button>Request a free consultation</button></a>
+                    <div><a href="./contact.html"><button>Request a free consultation</button></a></div>
                 </div>
             </div>
         </section>
@@ -75,20 +72,21 @@
         </section>
 
         <section class="services">
-            <div class="item SEO">
-                <img src="./assets/assets_svg/SEO@2x.svg" alt="SEO">
+            <h1>Services we offer</h1>
+            <div class="item">
+                <div class="sprite SEO"></div>
                 <h2>SEO</h2>
                 <p>
                     Search Engine Optimization means
                     more customers for free. Think of it as an
                     up front investment: we organize and
-                    optimize your website's content &
+                    optimize your website's content &amp;
                     metadata to maximize the amount of
                     organic traffic your site sees.
                 </p>
             </div>
-            <div class="item SEM">
-                <img src="./assets/assets_svg/SEM@2x.svg" alt="SEM">
+            <div class="item">
+                <div class="sprite SEM"></div>
                 <h2>SEM</h2>
                 <p>
                     Search Engine Marketing meets your
@@ -99,20 +97,20 @@
                     site and turns them into customers.
                 </p>
             </div>
-            <div class="item Display">
-                <img src="./assets/assets_svg/Display@2x.svg" alt="Display">
+            <div class="item">
+                <div class="sprite Display"></div>
                 <h2>Display</h2>
                 <p>
                     Display advertising platforms like
-                    Facebook, Instagram, & Pinterest identify
+                    Facebook, Instagram, &amp; Pinterest identify
                     the right audience for your product.
                     Data-driven targeting focuses your
                     marketing dollars towards those people
                     with whom your message resonates.
                 </p>
             </div>
-            <div class="item Design">
-                <img src="./assets/assets_svg/Design@2x.svg" alt="Design">
+            <div class="item">
+                <div class="sprite Design"></div>
                 <h2>Design</h2>
                 <p>
                     Good design looks nice. Great design
@@ -127,7 +125,7 @@
 
         <section class="philosophy">
             <div class="philosophy-content">
-                <h1>Aurum's philosophy</h1>
+                <h1>Aurum's philosophy:</h1>
                 <div class="quote">"Be a partner, not a vendor"</div>
                 <p>
                     As small business owners ourselves, we know you’re heavily 
@@ -164,9 +162,9 @@
                     We’re here to help your business reach the next level. 
                     Click below to get started.
                 </p>
-                <a href="./contact.html"><button>Request a free consultation</button></a>
+                <div class="button"><a href="./contact.html"><button>Request a free consultation</button></a></div>
             </div>
-            <img src="#" alt="All in!">
+            <img class="teamwork" src="./assets/images/team.jpg" alt="All in!">
         </section>
 
         <footer class="footer">

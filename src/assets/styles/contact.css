@@ -16,6 +16,7 @@
     width: 35vw;
     margin: 50px auto;
     grid-gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .star {
@@ -28,7 +29,12 @@
 }
 
 label {
-    color: white;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.chars {
+    text-align: right;
 }
 
 input {
@@ -38,68 +44,56 @@ input {
 textarea {
     resize: none;
     overflow: auto;
+    padding: 5px;
 }
 
 .contact-card {
     grid-area: card;
     display: grid;
     justify-items: start;
-    padding: 30px;
     margin: 50px auto auto auto;
-    width: 35vw;
-    background: white;
+    width: 40vw;
 }
 
 .contact-card h1 {
-    font-size: 2.8rem;
-    color: var(--blue);
-    padding-bottom: 25px;
+    font-size: 3rem;
+    color: var(--white);
+    line-height: 3.5rem;
 }
 
 .contact-card .available {
-    color: var(--font-color);
+    color: var(--white);
     font-size: 1rem;
     align-items: center;
     font-weight: 600;
-    padding-bottom: 10px;
+    letter-spacing: .05rem;
+    padding-bottom: 15px;
     text-transform: uppercase;
+    padding-left: 3vw;
+}
+
+.contact-card .available:last-of-type {
+    padding-bottom: 0;
+}
+
+.contact-card .available img {
+    margin-right: 10px;
 }
 
 .contact-card p {
-    font-size: 1.5rem;
-    margin: 20px 0 20px 0;
+    font-size: 1.3rem;
+    letter-spacing: .05rem;
+    line-height: 1.8rem;
+    margin: 20px 0;
+    color: var(--white);
 }
 
 @media (max-width: 768px) {
-    .contact-card {
-        background: none;
-        margin-top: 25px;
-        justify-items: end;
-        text-align: right;
-        padding: 30px 0 0 0;
-    }
-
-    .contact-card h1 {
-        color: white;
-    }
-
     .contact-card .available {
-        color: white;
         font-size: .8rem;
         font-weight: 600;
+        letter-spacing: .1rem;
     }
-
-    .contact-card p {
-        color: white;
-        line-height: 1.8rem;
-    }
-
-    .arrow {
-        width: 33vw;
-        right: -33vw;
-        transform: rotate(-18deg);
-    }
-
 }
 
 @media (max-width: 425px) {
@@ -112,13 +106,11 @@ textarea {
         width: 80vw;
         text-align: center;
         justify-items: center;
+        margin: 0 auto;
     }
 
     .form {
         width: 80vw;
-    }
-
-    .arrow {
-        display: none;
+        margin: 0 auto;
     }
 }
