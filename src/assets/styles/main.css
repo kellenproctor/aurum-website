@@ -81,7 +81,6 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: end;
-    padding: 2vh 0 0 0;
     font-family: Drim;
     position: fixed;
     top: 0;
@@ -96,11 +95,16 @@ button:hover {
 .logo {
     grid-column: 1 / 2;
     margin: 0 0 2.5vh 5vw;
+    padding-top: 2vh;
     height: 10vh;
     width: 20vw;
 }
 
-.logo img {
+.logo a {
+    height: inherit;
+}
+
+.logo a img {
     height: inherit;
 }
 
@@ -127,8 +131,9 @@ button:hover {
     border-bottom: 2px solid;
 }
 
-.icon {
+.menu-button {
     display: none;
+    font-size: 3rem;
 }
 
 /* PAGE SPECIFIC CSS */
@@ -280,7 +285,7 @@ button:hover {
 
 /* PHILOSOPHY */
 .philosophy {
-    padding: 8vh 9vw;
+    padding: 8vh 8vw;
     background: var(--background);
     grid-area: philosophy;
     display: grid;
@@ -406,7 +411,7 @@ button:hover {
 
     /* NAVBAR */
     .navbar {
-        grid-template-columns: 60vw 40vw;
+        grid-template-columns: 70vw 30vw;
         grid-template-areas: "logo button" "links links";
         margin: 0;
         position: fixed;
@@ -439,6 +444,10 @@ button:hover {
         width: 100vw;
     }
 
+    .top-nav a {
+        margin-bottom: 15px;
+    }
+
     [aria-controls="menu-list"] {
         display: block;
         margin-bottom: 10px;
@@ -463,33 +472,25 @@ button:hover {
     /* HERO */
     .hero {
         height: 87vh;
-        align-content: start;
-        background-position-x: -60vw;
+        align-content: end;
+        justify-content: center;
+        background-position-x: -45vw;
     }
 
     /* HERO - CALL TO ACTION */
     .cta {
-        width: 55vw;
-        margin: 50px 20px 0 0;
-        padding: 10px;
+        width: 80vw;
+        padding: 20px;
+        margin-bottom: 10vh;
     }
 
-    .available {
-        font-weight: bold;
+    .cta-top .available {
+        font-weight: 600;
     }
 
-    .available img {
-
+    .cta-top h2 {
+        font-size: 2.2rem;
     }
-
-    .cta h2 {
-
-    }
-
-    .cta p {
-
-    }
-
 
     /* MOBILE CALL TO ACTION */
     #cta-bottom {
@@ -510,6 +511,12 @@ button:hover {
     }
 
     /* SERVICES */
+    .sprite {
+        height: 20vw;
+        width: 20vw;
+        margin: 0 0 4vw 0;
+    }
+
     .services {
         grid-template-columns: 1fr;
     }
@@ -525,9 +532,6 @@ button:hover {
 
     .philosophy h1 {
         padding: 0;
-    }
-
-    .philosophy p {
     }
 
     /* FOOTER */

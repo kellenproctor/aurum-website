@@ -9,7 +9,7 @@
     background-color: var(--background);
     grid-area: hero;
     display: grid;
-    height: 85vh;
+    height: 86vh;
     margin-top: 15vh;
     align-content: center;
     justify-content: center;
@@ -100,5 +100,33 @@
 
     .profile {
         width: 80vw;
+        padding: 100px 25px 25px 25px;
     }
+}
+
+@media (max-width: 425px) {
+    .about-card {
+        width: 80vw;
+        padding: 0;
+    }
+    
+    .about-card h1 {
+        width: 70vw;
+        font-size: 2rem;
+        padding: 40px 0 10px 0;
+    }
+    
+    .about-card p {
+        width: 60vw;
+        font-size: inherit;
+        line-height: 1.5rem;
+        font-weight: 600;
+        margin: 0 0 20px 0;
+        text-align: left;
+    }
+
+    .profile p {
+        font-size: 1rem;
+    }
+
 }

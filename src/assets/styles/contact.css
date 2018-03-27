@@ -8,7 +8,6 @@
     grid-template-areas: "form card";
     background: var(--background);
     padding-bottom: 25px;
-    height: 85vh;
     margin-top: 15vh;
 }
 
@@ -102,17 +101,19 @@ textarea {
     .contact {
         grid-template-columns: 1fr;
         grid-template-areas: "card" "form";
+        margin-top: 15vh;
+        padding-top: 5vh;
     }
 
     .contact-card {
         width: 80vw;
-        text-align: center;
-        justify-items: center;
         margin: 0 auto;
+        padding-bottom: 5vh;
     }
 
     .form {
         width: 80vw;
         margin: 0 auto;
+        padding-bottom: 10vh;
     }
 }
