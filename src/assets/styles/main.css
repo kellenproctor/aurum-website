@@ -86,6 +86,7 @@ button:hover {
     top: 0;
     background: var(--white);
     height: 15vh;
+    z-index: 100;
 }
 
 .navbar button {
@@ -96,6 +97,7 @@ button:hover {
     grid-column: 1 / 2;
     margin: 0 0 2.5vh 5vw;
     padding-top: 2vh;
+    padding-bottom: 2vh;
     height: 10vh;
     width: 20vw;
 }
@@ -229,6 +231,7 @@ button:hover {
 
 .services h1 {
     grid-column: 1 / -1;
+    text-align: center;
 }
 
 .item {
@@ -417,7 +420,6 @@ button:hover {
         position: fixed;
         background: white;
         top: 0;
-        z-index: 100;
     }
 
     .navbar.logo {
